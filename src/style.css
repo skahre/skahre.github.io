@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap");
+
+:root {
+  --font-baloo: "Baloo", sans-serif;
+  --font-baloo-weight: normal;
+  --font-lekton: "Lekton", sans-serif;
+  --font-lekton-regular: normal;
+  --font-lekton-bold: bold;
+
+  --col-sand: #fffdf1;
+  --col-apricot: #ffce99;
+  --col-orange: #ff9644;
+  --col-espresso: #562f00;
+
+  --col-white: #ffffff;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: var(--font-baloo);
+  font-weight: var(--font-baloo-weight);
+  font-size: 64px;
+  margin: 0;
+}
+
+h2 {
+  font-family: var(--font-baloo);
+  font-weight: var(--font-baloo-weight);
+  font-size: 32px;
+  margin: 0;
+}
+
+h3 {
+  font-family: var(--font-baloo);
+  font-weight: var(--font-baloo-weight);
+  font-size: 24px;
+  margin: 0;
+}
+
+h4 {
+  font-family: var(--font-baloo);
+  font-weight: var(--font-baloo-weight);
+  font-size: 16px;
+  margin: 0;
+}
+
+p {
+  font-family: var(--font-lekton);
+  font-weight: var(--font-lekton-regular);
+  font-size: 16px;
+  margin: 0;
+}
