@@ -1,4 +1,5 @@
 import frackImage from "../../assets/frack-bild.jpg";
+import MBDImage from "../../assets/mbd-bild.jpg";
 import "./hero.css";
 import Arrow from "../../assets/arrow.tsx";
 import Button from "../../components/UI-elements/button.tsx";
@@ -9,21 +10,21 @@ export default function HeroSection() {
       <div className="hero-left">
         <h1>Hi, I'm Sandra!</h1>
         <div className="hero-text">
-          <p className="subtitle">
+          <h3 className="subtitle">
             MSc Student in Interactive Media Technology
+          </h3>
+          <p>
+            <Arrow fill="var(--col-espresso)" height="0.5lh" />
+            Full-stack Developer
           </p>
-          <span>
-            <Arrow fill="var(--col-espresso)" height="12px" />
-            <p>Full-stack Developer</p>
-          </span>
-          <span>
-            <Arrow fill="var(--col-espresso)" height="12px" />
-            <p>Front-end Developer</p>
-          </span>
-          <span>
-            <Arrow fill="var(--col-espresso)" height="12px" />
-            <p>UX Designer</p>
-          </span>
+          <p>
+            <Arrow fill="var(--col-espresso)" height="0.5lh" />
+            Front-end Developer
+          </p>
+          <p>
+            <Arrow fill="var(--col-espresso)" height="0.5lh" />
+            UX Designer
+          </p>
         </div>
         <div className="btn-band">
           <Button
@@ -40,7 +41,7 @@ export default function HeroSection() {
           />
         </div>
       </div>
-      <img src={frackImage} />
+      <img src={MBDImage} />
     </section>
   );
 }

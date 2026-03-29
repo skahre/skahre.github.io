@@ -14,6 +14,12 @@
   --col-espresso: #562f00;
 
   --col-white: #ffffff;
+  --col-black: #000000;
+
+  --screen-xl: 1536px;
+  --screen-l: 1024px;
+  --screen-m: 768px;
+  --screen-s: 425px;
 }
 
 html,
@@ -56,4 +62,50 @@ p {
   font-weight: var(--font-lekton-regular);
   font-size: 16px;
   margin: 0;
+}
+
+/* Medium devices such as tablets (1024px or lesser) */
+@media only screen and (min-width: 1536px) {
+  h1 {
+    font-size: 128px;
+  }
+
+  h2 {
+    font-size: 64px;
+  }
+
+  h3 {
+    font-size: 48px;
+  }
+
+  h4 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 32px;
+  }
+}
+
+/* Small devices such as phones (768px or lesser) */
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 12px;
+  }
 }

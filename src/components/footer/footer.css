@@ -16,3 +16,11 @@ footer {
   align-items: center;
   gap: 16px;
 }
+
+/* Small devices such as phones (768px or lesser) */
+@media only screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    gap: 36px;
+  }
+}

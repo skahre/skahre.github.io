@@ -18,3 +18,17 @@ nav {
   flex-direction: row;
   gap: 64px;
 }
+
+.hamburger-container {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .hamburger-container {
+    display: contents;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}

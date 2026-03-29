@@ -1,4 +1,5 @@
 import "./navbar.css";
+import Hamburger from "../../assets/hamburger";
 
 export default function Navbar() {
   return (
@@ -10,6 +11,9 @@ export default function Navbar() {
         <h4>About me</h4>
         <h4>Contact</h4>
       </span>
+      <div className="hamburger-container">
+        <Hamburger />
+      </div>
     </nav>
   );
 }
