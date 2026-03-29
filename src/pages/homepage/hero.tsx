@@ -1,4 +1,3 @@
-import frackImage from "../../assets/frack-bild.jpg";
 import MBDImage from "../../assets/mbd-bild.jpg";
 import "./hero.css";
 import Arrow from "../../assets/arrow.tsx";

@@ -12,7 +12,7 @@
   width: 40%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 333px 333px 20px 20px;
+  border-radius: 1111px 1111px 20px 20px;
   border-style: solid;
   border-width: 4px;
   border-color: var(--col-orange);
@@ -55,4 +55,37 @@
   display: flex;
   align-items: center;
   gap: 36px;
+}
+
+@media only screen and (min-width: 1536px) {
+  .hero {
+    padding: 176px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    padding: 36px;
+    gap: 36px;
+  }
+
+  .hero-left {
+    gap: 16px;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero img {
+    width: 100%;
+  }
+
+  .hero-left {
+    width: 100%;
+    order: 1;
+  }
 }

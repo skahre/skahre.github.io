@@ -64,7 +64,7 @@ p {
   margin: 0;
 }
 
-/* Medium devices such as tablets (1024px or lesser) */
+/* Extra large devices such as desktops (1536px or more) */
 @media only screen and (min-width: 1536px) {
   h1 {
     font-size: 128px;
