@@ -13,8 +13,8 @@ export default function MobileMenu({ onClick }: { onClick: () => void }) {
       <div className="navigation">
         <h2>Home</h2>
         <h2>Projects</h2>
-        <h2>Education</h2>
-        <h2>About me</h2>
+        <h2>Experience</h2>
+        <h2>About</h2>
         <h2>Contact</h2>
       </div>
     </div>

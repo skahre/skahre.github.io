@@ -17,7 +17,7 @@ footer {
   gap: 16px;
 }
 
-@media only screen and (min-width: 1536px) {
+@media only screen and (min-width: 2000px) {
   footer {
     padding: 48px 176px;
   }

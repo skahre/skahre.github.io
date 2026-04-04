@@ -16,20 +16,24 @@ nav {
 .nav-links {
   display: flex;
   flex-direction: row;
-  gap: 64px;
+  gap: 32px;
 }
 
 .hamburger-container {
   display: none;
 }
 
-@media only screen and (min-width: 1536px) {
+@media only screen and (min-width: 2000px) {
   nav {
     padding: 48px 176px;
   }
+
+  .nav-links {
+    gap: 64px;
+  }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 880px) {
   nav {
     padding: 36px;
   }
