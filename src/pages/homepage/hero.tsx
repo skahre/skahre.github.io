@@ -2,12 +2,13 @@ import MBDImage from "../../assets/mbd-bild.jpg";
 import "./hero.css";
 import Arrow from "../../assets/arrow.tsx";
 import Button from "../../components/UI-elements/button.tsx";
+import TypingHeader from "../../components/typingHeader/typingHeader.tsx";
 
 export default function HeroSection() {
   return (
     <section className="hero">
       <div className="hero-left">
-        <h1>Hi, I'm Sandra!</h1>
+        <TypingHeader />
         <div className="hero-text">
           <h3 className="subtitle">
             MSc Student in Interactive Media Technology

@@ -1,5 +1,5 @@
 .hero {
-  padding: 96px;
+  padding: 64px 96px;
   gap: 96px;
   align-items: center;
   display: flex;
@@ -18,14 +18,6 @@
   border-color: var(--col-orange);
 }
 
-.hero h1 {
-  color: var(--col-orange);
-  text-decoration-color: var(--col-espresso);
-  text-decoration-thickness: 8%;
-  text-decoration-style: wavy;
-  text-decoration-line: underline;
-}
-
 .hero p {
   display: flex;
   align-items: center;
@@ -37,7 +29,7 @@
 
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 16px;
 }
 
 .subtitle {
