@@ -1,14 +1,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./style.css";
-import Navbar from "./components/navbar/navbar";
-import Footer from "./components/footer/footer";
-import HomePage from "./pages/home.tsx";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Navbar />
-    <HomePage />
-    <Footer />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </StrictMode>,
 );
