@@ -1,4 +1,4 @@
-import HeroSection from "./homepage/hero";
+import HeroSection from "./home-page/hero";
 import "../style.css";
 
 export default function HomePage() {

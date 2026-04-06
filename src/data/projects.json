@@ -1,0 +1,24 @@
+[
+  {
+    "image": "/pepp.png",
+    "title": "Pepp Membership Platform",
+    "date": "Spring 2026",
+    "description": "Working for non-profit organization Pepp on their new membership platform.",
+    "tags": [
+      "Typescript",
+      "Next.js",
+      "Tailwind CSS",
+      "Prisma",
+      "NextAuth",
+      "PostgreSQL",
+      "Figma"
+    ]
+  },
+  {
+    "image": "/mbd.png",
+    "title": "Career Fair Website",
+    "date": "Fall 2025 - Spring 2026",
+    "description": "Working on the website for the Career Fair of the Media Technology chapter at KTH",
+    "tags": ["Typescript", "React", "PHP", "MySQL", "Figma"]
+  }
+]

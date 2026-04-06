@@ -1,0 +1,9 @@
+.projects-page {
+  padding: 96px;
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+}
