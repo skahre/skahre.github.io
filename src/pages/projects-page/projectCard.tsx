@@ -1,5 +1,6 @@
 import "./projectCard.css";
 import Button from "../../components/UI-elements/button";
+import type { Project } from "../../data/projects";
 
 export function Tag({ label }: { label: string }) {
   return (
@@ -9,21 +10,13 @@ export function Tag({ label }: { label: string }) {
   );
 }
 
-interface ProjectCardProps {
-  image: string;
-  title: string;
-  date: string;
-  description: string;
-  tags: string[];
-}
-
 export default function ProjectCard({
   image,
   title,
   date,
   description,
   tags,
-}: ProjectCardProps) {
+}: Project) {
   return (
     <div className="project-card">
       <img src={image} />

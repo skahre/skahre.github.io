@@ -2,7 +2,7 @@ import "../style.css";
 import "./projects.css";
 import ProjectCard from "./projects-page/projectCard";
 
-import projects from "../data/projects.json";
+import { projects } from "../data/projects";
 
 export default function ProjectsPage() {
   return (
