@@ -1,13 +1,11 @@
-import "../style.css";
-import "./projects.css";
 import ProjectCard from "./projects-page/projectCard";
 
 import { projects } from "../data/projects";
 
 export default function ProjectsPage() {
   return (
-    <div className="projects-page">
-      <div className="project-cards">
+    <div className="flex justify-center p-[96px]">
+      <div className="flex flex-wrap justify-center gap-[36px]">
         {projects.map((project, index) => (
           <ProjectCard
             key={index}
