@@ -7,17 +7,17 @@ button {
   font-weight: var(--font-beloo-weight);
 
   border-style: solid;
-  border-color: var(--col-orange);
+  border-color: var(--color-orange);
   border-width: 2px;
 }
 
 .primary {
-  color: var(--col-white);
-  background-color: var(--col-orange);
+  color: var(--color-white);
+  background-color: var(--color-orange);
 }
 
 .secondary {
-  color: var(--col-orange);
+  color: var(--color-orange);
   background-color: #1fe0;
 }
 

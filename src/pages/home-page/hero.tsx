@@ -14,15 +14,15 @@ export default function HeroSection() {
             MSc Student in Interactive Media Technology
           </h3>
           <p>
-            <Arrow fill="var(--col-espresso)" height="0.5lh" />
+            <Arrow fill="var(--color-espresso)" height="0.5lh" />
             Full-stack Developer
           </p>
           <p>
-            <Arrow fill="var(--col-espresso)" height="0.5lh" />
+            <Arrow fill="var(--color-espresso)" height="0.5lh" />
             Front-end Developer
           </p>
           <p>
-            <Arrow fill="var(--col-espresso)" height="0.5lh" />
+            <Arrow fill="var(--color-espresso)" height="0.5lh" />
             UX Designer
           </p>
         </div>

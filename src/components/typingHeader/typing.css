@@ -1,10 +1,10 @@
 .hero-header {
-  color: var(--col-orange);
+  color: var(--color-orange);
   line-height: 0.8;
 }
 
 .underline {
-  text-decoration-color: var(--col-espresso);
+  text-decoration-color: var(--color-espresso);
   text-decoration-thickness: 8%;
   text-decoration-style: wavy;
   text-decoration-line: underline;
@@ -12,7 +12,7 @@
 
 .cursor {
   animation: blink 1s step-end infinite;
-  color: var(--col-black);
+  color: var(--color-black);
   font-weight: 100;
   font-family: var(--font-lekton);
   margin-left: -4px;

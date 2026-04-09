@@ -1,8 +1,8 @@
 .menu-container {
   padding: 36px;
-  background-color: color-mix(in srgb, var(--col-espresso) 85%, transparent);
+  background-color: color-mix(in srgb, var(--color-espresso) 85%, transparent);
 
-  color: var(--col-white);
+  color: var(--color-white);
 
   align-items: center;
 

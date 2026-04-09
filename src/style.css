@@ -3,100 +3,34 @@
 
 @import "tailwindcss";
 
-:root {
+@theme {
   --font-baloo: "Baloo", sans-serif;
-  --font-baloo-weight: normal;
   --font-lekton: "Lekton", sans-serif;
-  --font-lekton-regular: normal;
-  --font-lekton-bold: bold;
 
-  --col-sand: #fffdf1;
-  --col-apricot: #ffce99;
-  --col-orange: #ff9644;
-  --col-espresso: #562f00;
+  --color-sand: #fffdf1;
+  --color-apricot: #ffce99;
+  --color-orange: #ff9644;
+  --color-espresso: #562f00;
 
-  --col-white: #ffffff;
-  --col-black: #000000;
-
-  --screen-xl: 1536px;
-  --screen-l: 1024px;
-  --screen-m: 768px;
-  --screen-s: 425px;
+  --breakpoint-3xl: 1920px;
 }
 
-html,
 body,
 #root {
-  margin: 0;
   min-height: 100vh;
-  background-color: var(--col-sand);
+  background-color: var(--color-sand);
 }
 
-h1 {
-  font-family: var(--font-baloo);
-  font-weight: var(--font-baloo-weight);
-  font-size: 64px;
-  line-height: 1.2em;
-  margin: 0;
-}
-
-h2 {
-  font-family: var(--font-baloo);
-  font-weight: var(--font-baloo-weight);
-  font-size: 32px;
-  line-height: 1.2em;
-  margin: 0;
-}
-
-h3 {
-  font-family: var(--font-baloo);
-  font-weight: var(--font-baloo-weight);
-  font-size: 24px;
-  line-height: 1.2em;
-  margin: 0;
-}
-
-h4 {
-  font-family: var(--font-baloo);
-  font-weight: var(--font-baloo-weight);
-  font-size: 16px;
-  line-height: 1.2em;
-  margin: 0;
-}
-
-p {
-  font-family: var(--font-lekton);
-  font-weight: var(--font-lekton-regular);
-  font-size: 16px;
-  line-height: 1.2em;
-  margin: 0;
-}
-
-/* Extra large devices such as desktops (1536px or more) */
-@media only screen and (min-width: 2000px) {
-  h1 {
-    font-size: 128px;
-  }
-
-  h2 {
-    font-size: 64px;
-  }
-
-  h3 {
-    font-size: 48px;
-  }
-
+@layer base {
+  h1,
+  h2,
+  h3,
   h4 {
-    font-size: 32px;
+    line-height: 1.2em;
+    font-family: var(--font-baloo);
+    font-weight: normal;
   }
 
-  p {
-    font-size: 32px;
-  }
-}
-
-/* Small devices such as phones (768px or lesser) */
-@media only screen and (max-width: 768px) {
   h1 {
     font-size: 36px;
   }
@@ -114,6 +48,47 @@ p {
   }
 
   p {
+    font-family: var(--font-lekton);
+    font-weight: normal;
     font-size: 12px;
+    line-height: 1.2em;
+  }
+
+  /* breakpoint md */
+  @media only screen and (min-width: 768px) {
+    h1 {
+      font-size: 64px;
+    }
+    h2 {
+      font-size: 32px;
+    }
+    h3 {
+      font-size: 24px;
+    }
+    h4 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+
+  /* Extra large devices (1920px or more) */
+  @media only screen and (min-width: theme(--breakpoint-3xl)) {
+    h1 {
+      font-size: 128px;
+    }
+    h2 {
+      font-size: 64px;
+    }
+    h3 {
+      font-size: 48px;
+    }
+    h4 {
+      font-size: 32px;
+    }
+    p {
+      font-size: 32px;
+    }
   }
 }

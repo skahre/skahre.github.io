@@ -1,6 +1,6 @@
 .project-card {
   width: 330px;
-  background-color: var(--col-white);
+  background-color: var(--color-white);
   border-radius: 24px;
   padding: 16px;
   display: flex;
@@ -26,14 +26,14 @@
 .project-date {
   margin-top: -16px;
   font-size: 12px;
-  color: var(--col-orange);
+  color: var(--color-orange);
 }
 
 .tag {
   padding: 1px 4px;
   border-radius: 20px;
-  background-color: var(--col-apricot);
-  color: var(--col-espresso);
+  background-color: var(--color-apricot);
+  color: var(--color-espresso);
 }
 
 .tag p {
