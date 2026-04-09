@@ -11,6 +11,7 @@ Personal portfolio website built with React and TypeScript, showcasing projects 
 - **React** + **TypeScript**
 - **Vite**: build tool
 - **React Router**: client-side routing
+- **Tailwind CC**: Utility-first CSS
 - **GitHub Pages**: hosting
 
 ## Features
