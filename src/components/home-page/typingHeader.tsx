@@ -1,4 +1,3 @@
-import "./typing.css";
 import { useState, useEffect } from "react";
 
 export default function TypingHeader() {
@@ -82,11 +81,23 @@ export default function TypingHeader() {
   }, []);
 
   return (
-    <h1 className={`hero-header`}>
+    <h1 className="text-orange leading-[0.8] whitespace-nowrap">
       {displayedPrefix}
-      <span className={isStill ? "underline" : ""}>{displayedText}</span>
+      <span
+        className={
+          isStill
+            ? "underline decoration-wavy decoration-[8%] decoration-espresso"
+            : ""
+        }
+      >
+        {displayedText}
+      </span>
       {isDone && "!"}
-      <span className={`cursor${isDone ? " cursor-done" : ""}`}>|</span>
+      <span
+        className={`animate-blink text-black font-thin font-lekton -m-[4px] text-[0.8em] align-top ${isDone ? "hidden" : ""}`}
+      >
+        |
+      </span>
     </h1>
   );
 }

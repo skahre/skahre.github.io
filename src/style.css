@@ -13,6 +13,18 @@
   --color-espresso: #562f00;
 
   --breakpoint-3xl: 120rem;
+
+  --animate-blink: blink 1s step-end infinite;
+
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
 }
 
 body,
