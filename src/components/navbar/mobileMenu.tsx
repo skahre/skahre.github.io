@@ -1,8 +1,9 @@
 import Cross from "../../assets/cross";
+import { Link } from "react-router-dom";
 
 export default function MobileMenu({ onClick }: { onClick: () => void }) {
   return (
-    <div className="min-[880px]:hidden flex flex-col items-center w-full h-full fixed inset-0 box-border bg-[color-mix(in_srgb,var(--color-espresso)_85%,transparent)] text-white gap-[64px] p-[36px]">
+    <div className="nav:hidden flex flex-col items-center w-full h-full fixed inset-0 bg-espresso/85 text-white gap-[64px] p-[36px]">
       <div className="flex flex-row items-center justify-between w-full">
         <h2>Sandra Kåhre</h2>
         <div onClick={() => onClick()}>
@@ -10,11 +11,21 @@ export default function MobileMenu({ onClick }: { onClick: () => void }) {
         </div>
       </div>
       <div className="flex flex-col items-center gap-[36px]">
-        <h2>Home</h2>
-        <h2>Projects</h2>
-        <h2>Experience</h2>
-        <h2>About</h2>
-        <h2>Contact</h2>
+        <Link to="/">
+          <h2>Home</h2>
+        </Link>
+        <Link to="/projects">
+          <h2>Projects</h2>
+        </Link>
+        <Link to="/experience">
+          <h2>Experience</h2>
+        </Link>
+        <Link to="/about">
+          <h2>About</h2>
+        </Link>
+        <Link to="/contact">
+          <h2>Contact</h2>
+        </Link>
       </div>
     </div>
   );

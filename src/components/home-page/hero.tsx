@@ -2,6 +2,7 @@ import MBDImage from "../../assets/mbd-bild.jpg";
 import Arrow from "../../assets/arrow.tsx";
 import Button from "../UI-elements/button.tsx";
 import TypingHeader from "./typingHeader.tsx";
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   return (
@@ -26,12 +27,14 @@ export default function HeroSection() {
           </p>
         </div>
         <div className="flex items-center gap-[36px]">
-          <Button
-            label="see my work"
-            size="m"
-            variant="primary"
-            onClick={() => console.log("yippie")}
-          />
+          <Link to="/projects">
+            <Button
+              label="see my work"
+              size="m"
+              variant="primary"
+              onClick={() => console.log("yippie")}
+            />
+          </Link>
           <Button
             label="contact me"
             size="m"

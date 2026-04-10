@@ -15,7 +15,7 @@ export default function ProjectCard({
   date,
   description,
   tags,
-}: Project) {
+}: Omit<Project, "type">) {
   return (
     <div className="flex flex-col gap-[16px] w-[330px] rounded-[24px] p-[16px] bg-white shadow-md">
       <img

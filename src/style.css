@@ -12,6 +12,7 @@
   --color-orange: #ff9644;
   --color-espresso: #562f00;
 
+  --breakpoint-nav: 55rem;
   --breakpoint-3xl: 120rem;
 
   --animate-blink: blink 1s step-end infinite;

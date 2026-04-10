@@ -1,4 +1,5 @@
 export interface Project {
+  type: string[];
   image: string;
   title: string;
   date: string;
@@ -8,6 +9,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    type: ["coding"],
     image: "/pepp.png",
     title: "Pepp Membership Platform",
     date: "Spring 2026",
@@ -24,6 +26,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    type: ["design", "other"],
     image: "mcFunk.png",
     title: "Designing for Disabilities",
     date: "Spring 2026",
@@ -32,6 +35,7 @@ export const projects: Project[] = [
     tags: ["HCI Research", "Accessibility", "Figma", "Double Diamond"],
   },
   {
+    type: ["coding"],
     image: "/mbd.png",
     title: "Career Fair Website",
     date: "Fall 2025 - Spring 2026",
@@ -40,6 +44,7 @@ export const projects: Project[] = [
     tags: ["TypeScript", "React", "PHP", "MySQL", "Figma"],
   },
   {
+    type: ["other"],
     image: "evaluationMethods.png",
     title: "Evaluating Foodora App",
     date: "Fall 2025",
@@ -53,6 +58,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    type: ["other"],
     image: "humperFrame.png",
     title: "Researching Preference in Synchronization",
     date: "Fall 2025",
@@ -61,6 +67,7 @@ export const projects: Project[] = [
     tags: ["HCI Research", "Data Analysis", "User Testing"],
   },
   {
+    type: ["design"],
     image: "MTID.png",
     title: "Designing for Rituals",
     date: "Fall 2025",
@@ -75,6 +82,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    type: ["other"],
     image: "KEX.png",
     title: "Bachelor Thesis Project",
     date: "Spring 2025",
@@ -83,6 +91,7 @@ export const projects: Project[] = [
     tags: ["HCI Research", "Data Analysis", "User Testing"],
   },
   {
+    type: ["coding"],
     image: "cinemind.png",
     title: "Movie Quiz",
     date: "Fall 2024",
