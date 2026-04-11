@@ -20,6 +20,7 @@ export default function ProjectCard({
     <div className="flex flex-col gap-[16px] w-[330px] rounded-[24px] p-[16px] bg-white shadow-md">
       <img
         src={image}
+        alt={title}
         className="w-full h-auto object-contain rounded-[10px]"
       />
       <div className="flex flex-col gap-[16px]">

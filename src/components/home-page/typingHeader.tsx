@@ -16,7 +16,7 @@ export default function TypingHeader() {
     const sequence = [
       { text: "sandra", deleteTo: "" },
       { text: "Sanrda", deleteTo: "San" },
-      { text: "Sandra", pausBeforeFinal: true },
+      { text: "Sandra", pauseBeforeFinal: true },
     ];
 
     function tick() {
@@ -48,7 +48,7 @@ export default function TypingHeader() {
           if (current.deleteTo !== undefined) {
             isDeleting = true;
             timeout = setTimeout(tick, 1000); // pause before deleting
-          } else if (current.pausBeforeFinal) {
+          } else if (current.pauseBeforeFinal) {
             timeout = setTimeout(() => {
               setIsDone(true);
               setIsStill(true);

@@ -1,6 +1,8 @@
+import type { TabFilter } from "../../data/projects";
+
 interface FilterTabsProps {
-  selectedTab: string;
-  onTabSelect: (tab: string) => void;
+  selectedTab: TabFilter;
+  onTabSelect: (tab: TabFilter) => void;
 }
 
 export default function FilterTabs({

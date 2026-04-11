@@ -1,5 +1,12 @@
+export type ProjectType = "coding" | "design" | "other";
+export type TabFilter = "all" | ProjectType;
+
 export interface Project {
-  type: string[];
+  type: ProjectType[];
+}
+
+export interface Project {
+  type: ProjectType[];
   image: string;
   title: string;
   date: string;
@@ -27,7 +34,7 @@ export const projects: Project[] = [
   },
   {
     type: ["design", "other"],
-    image: "mcFunk.png",
+    image: "/mcFunk.png",
     title: "Designing for Disabilities",
     date: "Spring 2026",
     description:
@@ -45,7 +52,7 @@ export const projects: Project[] = [
   },
   {
     type: ["other"],
-    image: "evaluationMethods.png",
+    image: "/evaluationMethods.png",
     title: "Evaluating Foodora App",
     date: "Fall 2025",
     description:
@@ -59,7 +66,7 @@ export const projects: Project[] = [
   },
   {
     type: ["other"],
-    image: "humperFrame.png",
+    image: "/humperFrame.png",
     title: "Researching Preference in Synchronization",
     date: "Fall 2025",
     description:
@@ -68,7 +75,7 @@ export const projects: Project[] = [
   },
   {
     type: ["design"],
-    image: "MTID.png",
+    image: "/MTID.png",
     title: "Designing for Rituals",
     date: "Fall 2025",
     description:
@@ -83,7 +90,7 @@ export const projects: Project[] = [
   },
   {
     type: ["other"],
-    image: "KEX.png",
+    image: "/KEX.png",
     title: "Bachelor Thesis Project",
     date: "Spring 2025",
     description:
@@ -92,7 +99,7 @@ export const projects: Project[] = [
   },
   {
     type: ["coding"],
-    image: "cinemind.png",
+    image: "/cinemind.png",
     title: "Movie Quiz",
     date: "Fall 2024",
     description: "Quiz website created as part of course work at KTH.",

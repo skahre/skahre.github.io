@@ -6,7 +6,7 @@ interface ButtonProps {
 }
 
 const baseStyle =
-  "border-solid border-orange border-[2px] rounded-full cursor-pointer";
+  "border-solid border-orange border-[2px] rounded-full cursor-pointer w-fit";
 const sizeStyle = {
   s: "px-[8px] py-[2px]",
   m: "px-[16px] py-[4px]",
@@ -33,11 +33,11 @@ export default function Button({
     );
 
   return (
-    <button
+    <div
       onClick={onClick}
       className={`${baseStyle} ${sizeStyle[size]} ${variantStyle[variant]}`}
     >
       {labelElement}
-    </button>
+    </div>
   );
 }

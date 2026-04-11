@@ -45,6 +45,7 @@ export default function HeroSection() {
       </div>
       <img
         src={MBDImage}
+        alt="Profile picture of Sandra"
         className="w-full sm:w-2/5 aspect-square object-cover rounded-t-full border-solid border-4 border-orange"
       />
     </section>
