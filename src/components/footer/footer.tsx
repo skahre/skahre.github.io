@@ -11,7 +11,11 @@ export default function Footer() {
         </p>
       </div>
       <span className="flex flex-row items-center gap-[16px]">
-        <LinkedInIcon fill="var(--color-white)" size="24px" />
+        <LinkedInIcon
+          fill="var(--color-white)"
+          size="24px"
+          aria-label="LinkedIn Logo"
+        />
         <h4>/sandra-kahre</h4>
       </span>
     </footer>
