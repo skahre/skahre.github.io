@@ -6,7 +6,7 @@ export default function MobileMenu({ onClick }: { onClick: () => void }) {
     <div className="nav:hidden flex flex-col items-center w-full h-full fixed inset-0 bg-espresso/85 text-white gap-[64px] p-[36px]">
       <div className="flex flex-row items-center justify-between w-full">
         <h2>Sandra Kåhre</h2>
-        <div onClick={() => onClick()}>
+        <div onClick={() => onClick()} aria-label="Close mobile menu">
           <Cross />
         </div>
       </div>

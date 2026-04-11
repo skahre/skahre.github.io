@@ -34,7 +34,12 @@ export default function Navbar() {
           </NavLink>
         </span>
         {!isMobileMenuOpen && (
-          <div className="nav:hidden" onClick={() => setIsMobileMenuOpen(true)}>
+          <div
+            className="nav:hidden"
+            onClick={() => setIsMobileMenuOpen(true)}
+            aria-label="Open mobile menu"
+            aria-expanded={isMobileMenuOpen}
+          >
             <Hamburger />
           </div>
         )}
