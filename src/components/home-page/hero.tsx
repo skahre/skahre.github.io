@@ -6,27 +6,27 @@ import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   return (
-    <section className="flex flex-col sm:flex-row items-center bg-linear-to-r from-sand to-apricot p-[36px] md:px-[96px] md:py-[64px] 3xl:p-[176px] gap-[36px] md:gap-[96px]">
-      <div className="flex flex-col gap-[16px] items-center sm:items-start w-full sm:w-3/5 max-sm:order-last">
+    <section className="flex flex-col sm:flex-row items-center p-9 md:px-24 md:py-16 3xl:p-44 gap-9 md:gap-24">
+      <div className="flex flex-col gap-4 items-center sm:items-start w-full sm:w-3/5 max-sm:order-last">
         <TypingHeader />
-        <div className="flex flex-col gap-[16px]">
-          <h3 className="font-lekton font-bold">
+        <div className="flex flex-col gap-4">
+          <h2 className="font-body font-semibold h3">
             MSc Student in Interactive Media Technology
-          </h3>
-          <p className="flex items-center gap-[4px]">
-            <Arrow fill="var(--color-espresso)" height="0.5lh" />
+          </h2>
+          <p className="flex items-center gap-1">
+            <Arrow fill="var(--color-sage-400)" height="0.7lh" />
             Full-stack Developer
           </p>
-          <p className="flex items-center gap-[4px]">
-            <Arrow fill="var(--color-espresso)" height="0.5lh" />
+          <p className="flex items-center gap-1">
+            <Arrow fill="var(--color-sage-400)" height="0.7lh" />
             Front-end Developer
           </p>
-          <p className="flex items-center gap-[4px]">
-            <Arrow fill="var(--color-espresso)" height="0.5lh" />
+          <p className="flex items-center gap-1">
+            <Arrow fill="var(--color-sage-400)" height="0.7lh" />
             UX Designer
           </p>
         </div>
-        <div className="flex items-center gap-[36px]">
+        <div className="flex items-center gap-9">
           <Link to="/projects">
             <Button
               label="see my work"
@@ -46,7 +46,7 @@ export default function HeroSection() {
       <img
         src={MBDImage}
         alt="Profile picture of Sandra"
-        className="w-full sm:w-2/5 aspect-square object-cover rounded-t-full border-solid border-4 border-orange"
+        className="w-full sm:w-2/5 aspect-square object-cover rounded-t-full rounded-b-xl border-solid border-4 border-sage-200"
       />
     </section>
   );
