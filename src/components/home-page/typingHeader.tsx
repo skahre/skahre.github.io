@@ -81,12 +81,12 @@ export default function TypingHeader() {
   }, []);
 
   return (
-    <h1 className="text-orange leading-[0.8] whitespace-nowrap">
+    <h1 className="text-black leading-[0.8] whitespace-nowrap h1 font-bold">
       {displayedPrefix}
       <span
         className={
           isStill
-            ? "underline decoration-wavy decoration-[8%] decoration-espresso"
+            ? "text-sage-500 italic underline decoration-wavy decoration-[8%] decoration-sage-500"
             : ""
         }
       >
@@ -94,7 +94,7 @@ export default function TypingHeader() {
       </span>
       {isDone && "!"}
       <span
-        className={`animate-blink text-black font-thin font-lekton -m-[4px] text-[0.8em] align-top ${isDone ? "hidden" : ""}`}
+        className={`animate-blink text-black font-light font-poppins align-top ${isDone ? "hidden" : ""}`}
       >
         |
       </span>
