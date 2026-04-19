@@ -1,22 +1,21 @@
 export default function Cross() {
   return (
     <svg
-      width="38"
-      height="38"
+      className="w-full h-full"
       viewBox="0 0 38 38"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
         d="M28.5 9.5L9.5 28.5"
-        stroke="white"
+        stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M9.5 9.5L28.5 28.5"
-        stroke="white"
+        stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
