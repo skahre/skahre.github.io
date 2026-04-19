@@ -5,16 +5,17 @@ interface ButtonProps {
   variant?: "primary" | "secondary";
 }
 
-const baseStyle =
-  "border-solid border-orange border-[2px] rounded-full cursor-pointer w-fit";
+const baseStyle = "border-solid border-[2px] rounded-full cursor-pointer w-fit";
 const sizeStyle = {
-  s: "px-[8px] py-[2px]",
-  m: "px-[16px] py-[4px]",
-  l: "px-[32px] py-[8px]",
+  s: "px-2 py-[2px]",
+  m: "px-4 py-1",
+  l: "px-8 py-2",
 };
 const variantStyle = {
-  primary: "text-white bg-orange",
-  secondary: "text-orange bg-transparent",
+  primary:
+    "text-white bg-sage-500 border-sage-500 hover:bg-sage-600 transition-colors",
+  secondary:
+    "text-sage-500 border-sage-500 bg-transparent hover:bg-sage-200/75",
 };
 
 export default function Button({
