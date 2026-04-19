@@ -81,7 +81,7 @@ export default function TypingHeader() {
   }, []);
 
   return (
-    <h1 className="text-black leading-[0.8] whitespace-nowrap h1 font-bold">
+    <h1 className="text-black whitespace-nowrap h1 font-bold">
       {displayedPrefix}
       <span
         className={
