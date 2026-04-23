@@ -17,9 +17,11 @@ export default function ProjectsPage() {
   });
 
   return (
-    <div className="flex flex-col justify-center items-center px-[36px] lg:px-[96px] py-[36px] gap-[48px]">
-      <FilterTabs selectedTab={selectedTab} onTabSelect={setSelectedTab} />
-      <div className="flex flex-wrap justify-center gap-[36px]">
+    <div className="relative flex flex-col justify-center items-center px-9 lg:px-24 py-9 gap-12">
+      <div className="flex justify-center sticky top-[81.6px] md:top-[91.2px] nav:top-[107.2px] z-40">
+        <FilterTabs selectedTab={selectedTab} onTabSelect={setSelectedTab} />
+      </div>
+      <div className="flex flex-wrap justify-center gap-9">
         {filteredProjects.map((project) => {
           const { type: _, ...cardProps } = project;
           return <ProjectCard key={project.title} {...cardProps} />;

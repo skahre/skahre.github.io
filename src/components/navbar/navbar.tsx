@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="flex flex-row items-center justify-between h-fit bg-white border-b border-gray-200 px-9 py-2 nav:px-24 nav:py-4 3xl:px-44 3xl:py-12">
+      <nav className="flex flex-row items-center justify-between h-fit w-full bg-white border-b border-gray-200 px-9 py-2 nav:px-24 nav:py-4 3xl:px-44 3xl:py-12">
         <NavLink to="/">
           <div className="h2 font-bold flex items-center">Sandra Kåhre</div>
         </NavLink>

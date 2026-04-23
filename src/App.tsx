@@ -9,12 +9,16 @@ import UnderConstruction from "./pages/underConstruction.tsx";
 export default function App() {
   return (
     <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="*" element={<UnderConstruction />} />
-      </Routes>
+      <header className="sticky inset-0 w-full z-50">
+        <Navbar />
+      </header>
+      <main className="z-0">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="*" element={<UnderConstruction />} />
+        </Routes>
+      </main>
       <Footer />
     </>
   );

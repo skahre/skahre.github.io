@@ -10,27 +10,27 @@ export default function FilterTabs({
   onTabSelect,
 }: FilterTabsProps) {
   return (
-    <div className="flex flex-row justify-center gap-[36px] bg-white rounded-full w-fit px-[36px] py-[8px] shadow-md">
+    <div className="flex flex-row justify-center gap-9 rounded-full w-fit px-9 py-2 bg-white/70 backdrop-blur-md border-b border-white/30">
       <h3
-        className={`cursor-pointer ${selectedTab === "all" ? "text-orange underline" : ""}`}
+        className={`cursor-pointer ${selectedTab === "all" ? "text-peach underline" : ""}`}
         onClick={() => onTabSelect("all")}
       >
         All
       </h3>
       <h3
-        className={`cursor-pointer ${selectedTab === "coding" ? "text-orange underline" : ""}`}
+        className={`cursor-pointer ${selectedTab === "coding" ? "text-peach underline" : ""}`}
         onClick={() => onTabSelect("coding")}
       >
         Coding
       </h3>
       <h3
-        className={`cursor-pointer ${selectedTab === "design" ? "text-orange underline" : ""}`}
+        className={`cursor-pointer ${selectedTab === "design" ? "text-peach underline" : ""}`}
         onClick={() => onTabSelect("design")}
       >
         Design
       </h3>
       <h3
-        className={`cursor-pointer ${selectedTab === "other" ? "text-orange underline" : ""}`}
+        className={`cursor-pointer ${selectedTab === "other" ? "text-peach underline" : ""}`}
         onClick={() => onTabSelect("other")}
       >
         Other
