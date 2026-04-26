@@ -17,7 +17,7 @@ export default function ProjectsPage() {
   });
 
   return (
-    <div className="relative flex flex-col justify-center items-center px-9 lg:px-24 py-9 gap-12">
+    <div className="relative flex flex-col justify-center items-center px-9 py-9 gap-12">
       <div className="flex justify-center sticky top-[81.6px] md:top-[91.2px] nav:top-[107.2px] z-40">
         <FilterTabs selectedTab={selectedTab} onTabSelect={setSelectedTab} />
       </div>
