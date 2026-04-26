@@ -8,11 +8,11 @@ import UnderConstruction from "./pages/underConstruction.tsx";
 
 export default function App() {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <header className="sticky inset-0 w-full z-50">
         <Navbar />
       </header>
-      <main className="z-0">
+      <main className="z-0 flex-1">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
@@ -20,6 +20,6 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
