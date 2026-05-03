@@ -1,6 +1,6 @@
 export default function UnderConstruction() {
   return (
-    <section className="flex flex-col items-center justify-between p-[36px] sm:p-[96px] 3xl:p-[176px] min-h-[64vh]">
+    <section className="flex flex-col items-center justify-between p-[36px] sm:p-[96px] 3xl:p-[176px] min-h-[64vh] gap-9">
       <div className="flex flex-col items-center text-center gap-[16px]">
         <h1 className="text-orange">Under construction</h1>
         <div className="flex flex-col gap-[8px] text-center">
@@ -12,7 +12,7 @@ export default function UnderConstruction() {
         </div>
       </div>
       <img
-        src="construction.png"
+        src="construction.svg"
         className="h-[85%] max-h-[10rem] md:max-h-[16rem] w-auto"
       />
     </section>

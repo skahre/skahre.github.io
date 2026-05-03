@@ -40,7 +40,7 @@ export default function FilterTabs({
       ))}
       <div
         style={{ left: pillPosition.left, width: pillPosition.width }}
-        className="absolute top-2 bottom-2 rounded-full bg-sage-500 transition-all duration-700 ease-in-out pointer-events-none"
+        className="absolute top-2 bottom-2 rounded-full bg-sage-500 transition-all duration-400 ease-in-out pointer-events-none"
       />
     </div>
   );
