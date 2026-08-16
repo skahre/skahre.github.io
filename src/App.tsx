@@ -4,6 +4,7 @@ import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 import HomePage from "./pages/home.tsx";
 import ProjectsPage from "./pages/projects.tsx";
+import ContactPage from "./pages/contact.tsx";
 import UnderConstruction from "./pages/underConstruction.tsx";
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<UnderConstruction />} />
         </Routes>
       </main>
