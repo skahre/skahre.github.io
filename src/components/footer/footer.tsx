@@ -1,4 +1,4 @@
-import LinkedInIcon from "../../assets/linkedin.tsx";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -24,9 +24,9 @@ export default function Footer() {
           </p>
         </div>
         <span className="flex flex-row items-center text-white gap-4">
-          <LinkedInIcon
+          <FaLinkedin
             fill="currentColor"
-            size="24px"
+            size={24}
             aria-label="LinkedIn Logo"
           />
           <h3 className="font-body font-semibold">/sandra-kahre</h3>

@@ -1,4 +1,4 @@
-import Hamburger from "../../assets/hamburger";
+import { FaBars } from "react-icons/fa6";
 import MobileMenu from "./mobileMenu";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
@@ -40,7 +40,7 @@ export default function Navbar() {
             aria-label="Open mobile menu"
             aria-expanded={isMobileMenuOpen}
           >
-            <Hamburger />
+            <FaBars className="h-full w-full" />
           </div>
         )}
       </nav>

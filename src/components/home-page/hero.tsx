@@ -1,5 +1,5 @@
 import MBDImage from "../../assets/mbd-bild.jpg";
-import Arrow from "../../assets/arrow.tsx";
+import { FaAngleRight } from "react-icons/fa";
 import Button from "../UI-elements/button.tsx";
 import TypingHeader from "./typingHeader.tsx";
 import { Link } from "react-router-dom";
@@ -14,15 +14,15 @@ export default function HeroSection() {
             MSc Student in Interactive Media Technology
           </h2>
           <p className="flex items-center gap-1">
-            <Arrow fill="var(--color-sage-400)" height="0.7lh" />
+            <FaAngleRight fill="var(--color-sage-400)" height="0.7lh" />
             Full-stack Developer
           </p>
           <p className="flex items-center gap-1">
-            <Arrow fill="var(--color-sage-400)" height="0.7lh" />
+            <FaAngleRight fill="var(--color-sage-400)" height="0.7lh" />
             Front-end Developer
           </p>
           <p className="flex items-center gap-1">
-            <Arrow fill="var(--color-sage-400)" height="0.7lh" />
+            <FaAngleRight fill="var(--color-sage-400)" height="0.7lh" />
             UX Designer
           </p>
         </div>

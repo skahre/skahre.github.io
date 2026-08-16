@@ -1,5 +1,5 @@
 import React from "react";
-import Cross from "../../assets/cross";
+import { FaXmark } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 
 type NavStyleFn = ({ isActive }: { isActive: boolean }) => React.CSSProperties;
@@ -20,7 +20,7 @@ export default function MobileMenu({
           onClick={() => onClick()}
           aria-label="Close mobile menu"
         >
-          <Cross />
+          <FaXmark className="w-full h-full" />
         </div>
       </div>
       <div className="h-full flex justify-center items-center">
