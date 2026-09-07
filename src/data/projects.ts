@@ -36,7 +36,7 @@ export const projects: Project[] = [
       "Figma",
     ],
     body: [
-      "Här är ett test på vad jag vill säga!",
+      "Här är ett test på vad jag vill säga! uhsfuheauifyweify wie fwe fweifj wiefj woifweif wiifeiwef i fwiwefjweo ifwoefih wofwfoiwhef iohwfw fowefh fh wwefh whfwefhwefhwo eifhiwef hwhef oiwf iooweifhwo eifkwjefhiw efiwuefhlaiuef elrfh lrhf eg  awleifu ae fkjawefh wueh faweiu weiufhuwefh kaw eflawe fhlaiwu ",
       "/pepp.png",
       "mer text wuhoooo",
     ],

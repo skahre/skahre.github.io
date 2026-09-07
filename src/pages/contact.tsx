@@ -5,27 +5,9 @@ import {
   FaLinkedin,
   FaGithubSquare,
 } from "react-icons/fa";
+import AppButton from "../components/UI-elements/appButton";
 
 export default function ContactPage() {
-  const buttontyles = `
-    group
-    flex flex-col items-center gap-2
-    rounded-3xl p-5
-    bg-sage-100
-    text-center font-semibold
-    shadow-md
-
-    transition-all duration-200 ease-out
-    hover:-translate-y-1 hover:rotate-[0.5deg]
-    hover:bg-sage-200 hover:shadow-lg
-
-    active:translate-y-0 active:scale-[0.97] active:shadow-sm
-
-    focus-visible:outline-2
-    focus-visible:outline-offset-2
-    focus-visible:outline-sage-500
-  `;
-
   return (
     <div className="w-full flex flex-col">
       <section className="relative flex min-h-64 w-full items-center justify-center overflow-hidden">
@@ -40,18 +22,11 @@ export default function ContactPage() {
       </section>
 
       <div className="w-full p-12 md:p-24 lg:px-44 flex flex-col sm:flex-row gap-9 justify-between items-center">
-        <a
+        <AppButton
+          text="Connect with me"
+          icon={<FaLinkedin size={64} />}
           href="https://www.linkedin.com/in/sandra-kahre/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={buttontyles}
-        >
-          Connect with me
-          <FaLinkedin
-            size={64}
-            className="transition-transform duration-200 ease-out group-hover:-translate-y-0.5 group-hover:-rotate-2"
-          />
-        </a>
+        />
 
         <div className="flex flex-col gap-4">
           <a
@@ -74,18 +49,11 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <a
+        <AppButton
+          text="See my projects"
+          icon={<FaGithubSquare size={64} />}
           href="https://github.com/skahre"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={buttontyles}
-        >
-          See my projects
-          <FaGithubSquare
-            size={64}
-            className="transition-transform duration-200 ease-out group-hover:-translate-y-0.5 group-hover:-rotate-2"
-          />
-        </a>
+        />
       </div>
     </div>
   );

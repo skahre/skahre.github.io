@@ -1,6 +1,9 @@
-import { useParams, Navigate } from "react-router-dom";
+import { useParams, Navigate, Link } from "react-router-dom";
 import { projects } from "../data/projects";
 import { Tag } from "../components/projects-page/projectCard";
+import AppButton from "../components/UI-elements/appButton";
+import { FaGithubSquare } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 export default function ProjectDetailPage() {
   const { slug } = useParams();
@@ -9,45 +12,75 @@ export default function ProjectDetailPage() {
   if (!project) return <Navigate to="/projects" replace />;
 
   return (
-    <main className="flex flex-col p-9 gap-4">
+    <main className="flex flex-col items-center p-9">
+      {/* Hero */}
       <div className="rounded-lg relative overflow-hidden">
-        <img src={project.image} alt={project.title} className="" />
-        <div className="absolute inset-0 bg-gray-500/60 z-10" />
-        <div className="absolute inset-0 z-20 flex flex-col gap-2 items-center justify-center">
-          <h1 className="h1 font-bold text-white">{project.title}</h1>
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full h-105 object-cover"
+        />
+        <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/50 to-black/20 z-10" />
+        <div className="absolute inset-0 z-20 flex flex-col gap-3 items-center justify-end pb-10 px-6 text-center">
+          <h1 className="h1 font-bold text-white drop-shadow-sm">
+            {project.title}
+          </h1>
           <p className="h3 text-sage-200 font-bold">{project.date}</p>
-          <div className="flex flex-row flex-wrap gap-2">
+          <div className="flex flex-row flex-wrap gap-2 justify-center max-w-xl">
             {project.tags.map((tag) => (
               <Tag key={tag} label={tag} />
             ))}
           </div>
         </div>
       </div>
-      {project.body &&
-        project.body.map((content) =>
-          content[0] === "/" ? (
-            <img key={content} src={content} alt={project.title} />
-          ) : (
-            <p key={content} className="whitespace-pre-line">
-              {content}
-            </p>
-          ),
+
+      {/* Body content */}
+      <div className="max-w-3xl px-6 py-12 flex flex-col gap-6 w-full">
+        {project.body &&
+          project.body.map((content) =>
+            content[0] === "/" ? (
+              <img
+                key={content}
+                src={content}
+                alt={project.title}
+                className="rounded-lg shadow-md w-full max-w-xl self-center"
+              />
+            ) : (
+              <p key={content} className="whitespace-pre-line leading-relaxed">
+                {content}
+              </p>
+            ),
+          )}
+
+        {project.links && project.links.length > 0 && (
+          <div className="flex flex-row justify-around gap-4 pt-4 border-t border-gray-200">
+            {project.links.map((link) => {
+              const isGithub = link.includes("github.com");
+              return (
+                <AppButton
+                  key={link}
+                  href={link}
+                  text={isGithub ? "View Code" : "View Project"}
+                  icon={
+                    isGithub ? (
+                      <FaGithubSquare size={48} />
+                    ) : (
+                      <FaExternalLinkAlt size={40} />
+                    )
+                  }
+                />
+              );
+            })}
+          </div>
         )}
-      {project.links &&
-        project.links.map((link) => {
-          const isGithub = link.includes("github.com");
-          return (
-            <a
-              key={link}
-              href={link}
-              target="_blank"
-              rel="noreferrer"
-              className="underline inline-flex items-center gap-1"
-            >
-              {isGithub ? "View Code" : "View Project"} →
-            </a>
-          );
-        })}
+
+        <Link
+          to="/projects"
+          className="text-sm text-gray-500 hover:underline pt-6"
+        >
+          ← Back to all projects
+        </Link>
+      </div>
     </main>
   );
 }
