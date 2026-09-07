@@ -23,14 +23,16 @@ export default function Footer() {
             © 2026 Sandra Kåhre • Designed & coded from scratch
           </p>
         </div>
-        <span className="flex flex-row items-center text-white gap-4">
-          <FaLinkedin
-            fill="currentColor"
-            size={24}
-            aria-label="LinkedIn Logo"
-          />
+        <a
+          href="https://www.linkedin.com/in/sandra-kahre"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Sandra Kåhre on LinkedIn"
+          className="flex flex-row items-center text-white gap-4 transition-colors duration-200 hover:text-sage-300"
+        >
+          <FaLinkedin fill="currentColor" size={24} />
           <h3 className="font-body font-semibold">/sandra-kahre</h3>
-        </span>
+        </a>
       </div>
     </footer>
   );
