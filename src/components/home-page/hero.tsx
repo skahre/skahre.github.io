@@ -19,11 +19,11 @@ export default function HeroSection() {
           </p>
           <p className="flex items-center gap-1">
             <FaAngleRight fill="var(--color-sage-400)" height="0.7lh" />
-            Front-end Developer
+            UX Designer
           </p>
           <p className="flex items-center gap-1">
             <FaAngleRight fill="var(--color-sage-400)" height="0.7lh" />
-            UX Designer
+            Accessibility focused
           </p>
         </div>
         <div className="flex items-center gap-9">
