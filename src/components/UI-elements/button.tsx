@@ -1,13 +1,26 @@
-interface ButtonProps {
+import { Link } from "react-router-dom";
+
+interface BaseButtonProps {
   label: string;
-  onClick: () => void;
   size?: "s" | "m" | "l";
   variant?: "primary" | "secondary";
   disabled?: boolean;
 }
 
+interface ButtonAsButton extends BaseButtonProps {
+  onClick: () => void;
+  to?: never;
+}
+
+interface ButtonAsLink extends BaseButtonProps {
+  to: string;
+  onClick?: never;
+}
+
+type ButtonProps = ButtonAsButton | ButtonAsLink;
+
 const baseStyle =
-  "border-solid border-[2px] rounded-full cursor-pointer w-fit transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0 disabled:active:scale-100";
+  "border-solid border-[2px] rounded-full cursor-pointer w-fit transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0 disabled:active:scale-100 inline-block";
 const sizeStyle = {
   s: "px-2 py-[2px]",
   m: "px-4 py-1",
@@ -22,10 +35,10 @@ const variantStyle = {
 
 export default function Button({
   label,
-  onClick,
   size = "m",
   variant = "primary",
   disabled = false,
+  ...rest
 }: ButtonProps) {
   const labelElement =
     size === "s" ? (
@@ -36,12 +49,29 @@ export default function Button({
       <h4>{label}</h4>
     );
 
+  const className = `${baseStyle} ${sizeStyle[size]} ${variantStyle[variant]}`;
+
+  if ("to" in rest && rest.to) {
+    if (disabled) {
+      return (
+        <span className={className} aria-disabled="true">
+          {labelElement}
+        </span>
+      );
+    }
+    return (
+      <Link to={rest.to} className={className}>
+        {labelElement}
+      </Link>
+    );
+  }
+
   return (
     <button
       type="button"
-      onClick={onClick}
+      onClick={rest.onClick}
       disabled={disabled}
-      className={`${baseStyle} ${sizeStyle[size]} ${variantStyle[variant]}`}
+      className={className}
     >
       {labelElement}
     </button>

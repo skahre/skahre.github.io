@@ -6,20 +6,24 @@ export interface Project {
 }
 
 export interface Project {
+  slug: string;
   type: ProjectType[];
   image: string;
   title: string;
   date: string;
   description: string;
+  body?: string[];
   tags: string[];
+  links?: string[];
 }
 
 export const projects: Project[] = [
   {
+    slug: "pepp",
     type: ["coding"],
     image: "/pepp.png",
     title: "Pepp Membership Platform",
-    date: "Spring 2026",
+    date: "Spring - Summer 2026",
     description:
       "Working for non-profit organization Pepp on their new membership platform.",
     tags: [
@@ -31,8 +35,15 @@ export const projects: Project[] = [
       "PostgreSQL",
       "Figma",
     ],
+    body: [
+      "Här är ett test på vad jag vill säga!",
+      "/pepp.png",
+      "mer text wuhoooo",
+    ],
+    links: ["https://pepp.io", "https://github.com/skahre/skahre.github.io"],
   },
   {
+    slug: "designing-for-disabilities",
     type: ["design", "other"],
     image: "/mcFunk.png",
     title: "Designing for Disabilities",
@@ -42,6 +53,7 @@ export const projects: Project[] = [
     tags: ["HCI Research", "Accessibility", "Figma", "Double Diamond"],
   },
   {
+    slug: "mbd",
     type: ["coding"],
     image: "/mbd.png",
     title: "Career Fair Website",
@@ -51,6 +63,7 @@ export const projects: Project[] = [
     tags: ["TypeScript", "React", "PHP", "MySQL", "Figma"],
   },
   {
+    slug: "evaluation-methods",
     type: ["other"],
     image: "/evaluationMethods.png",
     title: "Evaluating Foodora App",
@@ -65,6 +78,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "human-perception",
     type: ["other"],
     image: "/humperFrame.png",
     title: "Researching Preference in Synchronization",
@@ -74,6 +88,7 @@ export const projects: Project[] = [
     tags: ["HCI Research", "Data Analysis", "User Testing"],
   },
   {
+    slug: "designing-for-rituals",
     type: ["design"],
     image: "/MTID.png",
     title: "Designing for Rituals",
@@ -89,6 +104,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "bachelor-thesis",
     type: ["other"],
     image: "/KEX.png",
     title: "Bachelor Thesis Project",
@@ -98,6 +114,7 @@ export const projects: Project[] = [
     tags: ["HCI Research", "Data Analysis", "User Testing"],
   },
   {
+    slug: "cinemind",
     type: ["coding"],
     image: "/cinemind.png",
     title: "Movie Quiz",

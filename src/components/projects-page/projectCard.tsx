@@ -17,6 +17,7 @@ export default function ProjectCard({
   date,
   description,
   tags,
+  slug,
 }: Omit<Project, "type">) {
   return (
     <div className="flex flex-col gap-4 w-56 md:w-3xs 3xl:w-lg rounded-3xl p-4 bg-white shadow-md">
@@ -44,7 +45,7 @@ export default function ProjectCard({
               label="read more"
               size="m"
               variant="secondary"
-              onClick={() => console.log("yippie")}
+              to={`/projects/${slug}`}
             />
           </div>
         </div>
