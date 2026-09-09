@@ -37,20 +37,33 @@ export default function ProjectDetailPage() {
       {/* Body content */}
       <div className="max-w-3xl px-6 py-12 flex flex-col gap-6 w-full">
         {project.body &&
-          project.body.map((content) =>
-            content[0] === "/" ? (
-              <img
+          project.body.map((content) => {
+            if (content.startsWith("##")) {
+              return (
+                <h2 key={content} className="h3 font-bold text-gray-900 mt-2">
+                  {content.replace(/^##\s*/, "")}
+                </h2>
+              );
+            }
+            if (content[0] === "/") {
+              return (
+                <img
+                  key={content}
+                  src={content}
+                  alt={project.title}
+                  className="rounded-lg shadow-md w-full"
+                />
+              );
+            }
+            return (
+              <p
                 key={content}
-                src={content}
-                alt={project.title}
-                className="rounded-lg shadow-md w-full max-w-xl self-center"
-              />
-            ) : (
-              <p key={content} className="whitespace-pre-line leading-relaxed">
+                className="whitespace-pre-line text-gray-800 leading-relaxed"
+              >
                 {content}
               </p>
-            ),
-          )}
+            );
+          })}
 
         {project.links && project.links.length > 0 && (
           <div className="flex flex-row justify-around gap-4 pt-4 border-t border-gray-200">
