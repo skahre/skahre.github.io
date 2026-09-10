@@ -3,7 +3,7 @@ const buttontyles = `
   flex flex-col items-center gap-2
   rounded-3xl p-5
   bg-sage-100
-  text-center font-semibold
+  h4 text-center font-semibold
   shadow-md
 
   transition-all duration-200 ease-out

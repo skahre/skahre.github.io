@@ -12,7 +12,7 @@ export interface Project {
   title: string;
   date: string;
   description: string;
-  body?: string[];
+  body?: (string | string[])[];
   tags: string[];
   links?: string[];
 }
@@ -67,12 +67,30 @@ export const projects: Project[] = [
   {
     slug: "designing-for-disabilities",
     type: ["design", "other"],
-    image: "/mcFunk.png",
+    image: "/mcFunk/overview.png",
     title: "Designing for Disabilities",
     date: "Spring 2026",
     description:
       "Project in redesigning online pharmacies for cognitive disabilities performed at KTH.",
     tags: ["HCI Research", "Accessibility", "Figma", "Double Diamond"],
+    body: [
+      "## DM2624 Human Centered Technology for Disabilities",
+      "This project was done as part of the course DM2624 Human Centered Technology for Disabilities. The course centered around the concept of Universal Design and the project was to create a service design with the principles taught in the course.",
+      "## Rethinking Online Pharmacies",
+      "For the course project, our goal was to rethink online pharmacy services in Sweden through the lens of Universal Design. Working in a team of 5, each of us reasearch and brought one disability advocacy focus. My focus was on neurodevelopmental disorders (NPF/NDD), which shaped my focus on the project and how I, personally, looked at research, design decisions, and evaluations.",
+      [
+        "/mcFunk/personalization.png",
+        "/mcFunk/AI.png",
+        "/mcFunk/bodySearch.png",
+      ],
+      "We combined interview research, automated accessibility testing, and consultations with people with lived experience into a single concept: a unified pharmacy app offering flexible support (self-guided, AI-assisted, or live human help) alongside a more intuitive, body-part-based way to browse for products in the hopes of reducing reliance on medical terminology and cognitive load.",
+      "Working within the NPF/NDD focus reinforced something I already had a personal connection to, but it also pushed me to step back from my own experience and really listen to how other kinds of barriers show up for other people. It's shaped how I think about my future role as a developer working alongside designers on accessibility.",
+      "The full project report as well as the finished prototype is linked below.",
+    ],
+    links: [
+      "https://www.figma.com/proto/7NNCYlWAmGTFmk9ro5tVe2/Group-5?node-id=274-49&t=jgnZioUXGRs1Oeed-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=274%3A49&show-proto-sidebar=1",
+      "/mcFunk/report.pdf",
+    ],
   },
   {
     slug: "mbd",

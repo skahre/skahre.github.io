@@ -2,8 +2,17 @@ import { useParams, Navigate, Link } from "react-router-dom";
 import { projects } from "../data/projects";
 import { Tag } from "../components/projects-page/projectCard";
 import AppButton from "../components/UI-elements/appButton";
-import { FaGithubSquare } from "react-icons/fa";
-import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithubSquare, FaExternalLinkAlt, FaFilePdf } from "react-icons/fa";
+
+function getLinkMeta(link: string) {
+  if (link.includes("github.com")) {
+    return { label: "View Code", icon: <FaGithubSquare size={48} /> };
+  }
+  if (link.toLowerCase().endsWith(".pdf")) {
+    return { label: "View Report", icon: <FaFilePdf size={48} /> };
+  }
+  return { label: "View Project", icon: <FaExternalLinkAlt size={48} /> };
+}
 
 export default function ProjectDetailPage() {
   const { slug } = useParams();
@@ -37,7 +46,22 @@ export default function ProjectDetailPage() {
       {/* Body content */}
       <div className="max-w-3xl px-6 py-12 flex flex-col gap-6 w-full">
         {project.body &&
-          project.body.map((content) => {
+          project.body.map((content, i) => {
+            if (Array.isArray(content)) {
+              return (
+                <div key={i} className="flex flex-col sm:flex-row gap-4">
+                  {content.map((src) => (
+                    <img
+                      key={src}
+                      src={src}
+                      alt={project.title}
+                      className="rounded-lg shadow-md flex-1 min-w-0 w-full object-cover"
+                    />
+                  ))}
+                </div>
+              );
+            }
+
             if (content.startsWith("##")) {
               return (
                 <h2 key={content} className="h3 font-bold text-gray-900 mt-2">
@@ -45,6 +69,7 @@ export default function ProjectDetailPage() {
                 </h2>
               );
             }
+
             if (content[0] === "/") {
               return (
                 <img
@@ -55,6 +80,7 @@ export default function ProjectDetailPage() {
                 />
               );
             }
+
             return (
               <p
                 key={content}
@@ -68,20 +94,9 @@ export default function ProjectDetailPage() {
         {project.links && project.links.length > 0 && (
           <div className="flex flex-row justify-around gap-4 pt-4 border-t border-gray-200">
             {project.links.map((link) => {
-              const isGithub = link.includes("github.com");
+              const { label, icon } = getLinkMeta(link);
               return (
-                <AppButton
-                  key={link}
-                  href={link}
-                  text={isGithub ? "View Code" : "View Project"}
-                  icon={
-                    isGithub ? (
-                      <FaGithubSquare size={48} />
-                    ) : (
-                      <FaExternalLinkAlt size={40} />
-                    )
-                  }
-                />
+                <AppButton key={link} href={link} text={label} icon={icon} />
               );
             })}
           </div>
