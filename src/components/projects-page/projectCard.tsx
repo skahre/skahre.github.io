@@ -18,6 +18,7 @@ export default function ProjectCard({
   description,
   tags,
   slug,
+  body,
 }: Omit<Project, "type">) {
   return (
     <div className="flex flex-col gap-4 w-56 md:w-3xs 3xl:w-lg rounded-3xl p-4 bg-white shadow-md">
@@ -46,6 +47,7 @@ export default function ProjectCard({
               size="m"
               variant="secondary"
               to={`/projects/${slug}`}
+              disabled={!body}
             />
           </div>
         </div>

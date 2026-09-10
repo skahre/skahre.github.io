@@ -20,17 +20,27 @@ interface ButtonAsLink extends BaseButtonProps {
 type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 const baseStyle =
-  "border-solid border-[2px] rounded-full cursor-pointer w-fit transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0 disabled:active:scale-100 inline-block";
+  "border-solid border-[2px] rounded-full w-fit transition-all duration-200 inline-block";
+
+const interactiveStyle =
+  "cursor-pointer hover:-translate-y-0.5 active:translate-y-0 active:scale-95";
+
+const disabledStyle = "cursor-not-allowed opacity-50";
+
 const sizeStyle = {
   s: "px-2 py-[2px]",
   m: "px-4 py-1",
   l: "px-8 py-2",
 };
+
 const variantStyle = {
-  primary:
-    "text-white bg-sage-500 border-sage-500 hover:bg-sage-600 active:bg-sage-600",
-  secondary:
-    "text-sage-500 border-sage-500 bg-transparent hover:bg-sage-200/75 active:bg-sage-200",
+  primary: "text-white bg-sage-500 border-sage-500",
+  secondary: "text-sage-500 border-sage-500 bg-transparent",
+};
+
+const variantInteractiveStyle = {
+  primary: "hover:bg-sage-600 active:bg-sage-600",
+  secondary: "hover:bg-sage-200/75 active:bg-sage-200",
 };
 
 export default function Button({
@@ -49,12 +59,16 @@ export default function Button({
       <h4>{label}</h4>
     );
 
-  const className = `${baseStyle} ${sizeStyle[size]} ${variantStyle[variant]}`;
+  const className = `${baseStyle} ${sizeStyle[size]} ${variantStyle[variant]} ${
+    disabled
+      ? disabledStyle
+      : `${interactiveStyle} ${variantInteractiveStyle[variant]}`
+  }`;
 
   if ("to" in rest && rest.to) {
     if (disabled) {
       return (
-        <span className={className} aria-disabled="true">
+        <span className={className} aria-disabled="true" tabIndex={-1}>
           {labelElement}
         </span>
       );
