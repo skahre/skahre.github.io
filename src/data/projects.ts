@@ -105,7 +105,7 @@ export const projects: Project[] = [
   {
     slug: "evaluation-methods",
     type: ["other"],
-    image: "/evaluationMethods.png",
+    image: "/evaluation-methods/front.png",
     title: "Evaluating Foodora App",
     date: "Fall 2025",
     description:
@@ -116,6 +116,16 @@ export const projects: Project[] = [
       "Usability Testing",
       "Data Analysis",
     ],
+    body: [
+      "## DH2408 Evaluation Methods in Human-Computer Interaction",
+      "As part of a Human-Computer Interaction course at KTH, I worked with two teammates to conduct a usability evaluation of the Foodora mobile app, focusing on how efficient, effective, and satisfying the ordering process is for users.",
+      "We ran a comparative usability test with 10 university students, split evenly between novice and experienced food-delivery app users. Each participant completed four realistic tasks, including an allergen-sensitive order, finding a specific dish, editing an existing order, and shopping within a fixed budget, while we measured task success, completion time, and satisfaction.",
+      "/evaluation-methods/measurements.png",
+      "One of the more surprising results: despite fairly high error rates in tasks involving search and filtering, novice and experienced users reported almost identical satisfaction scores. It was a good reminder that self-reported satisfaction doesn't always capture real usability problems, which is something I've kept in mind since.",
+      'Recruiting genuinely novice users was harder than expected too, since food delivery is common enough among students that a true "never used it" group was tough to find.',
+      "The full findings, data, and recommendations are in the presentation below.",
+    ],
+    links: ["/evaluation-methods/presentation.pdf"],
   },
   {
     slug: "human-perception",
