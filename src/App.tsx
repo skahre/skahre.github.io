@@ -6,6 +6,7 @@ import HomePage from "./pages/home.tsx";
 import ProjectsPage from "./pages/projects.tsx";
 import ContactPage from "./pages/contact.tsx";
 import UnderConstruction from "./pages/underConstruction.tsx";
+import NotFound from "./pages/notFound.tsx";
 import ProjectDetailPage from "./pages/projectDetails.tsx";
 
 export default function App() {
@@ -19,8 +20,10 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/projects/:slug" element={<ProjectDetailPage />} />
+          <Route path="/experience" element={<UnderConstruction />} />
+          <Route path="/about" element={<UnderConstruction />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="*" element={<UnderConstruction />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />
