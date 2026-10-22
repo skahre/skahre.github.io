@@ -27,19 +27,17 @@ export default function HeroSection() {
           </p>
         </div>
         <div className="flex items-center gap-9">
-          <Link to="/projects">
-            <Button
-              label="see my work"
-              size="m"
-              variant="primary"
-              onClick={() => console.log("yippie")}
-            />
-          </Link>
+          <Button
+            label="see my work"
+            size="m"
+            variant="primary"
+            to="/projects"
+          />
           <Button
             label="contact me"
             size="m"
             variant="secondary"
-            onClick={() => console.log("yippie")}
+            to="/contact"
           />
         </div>
       </div>
